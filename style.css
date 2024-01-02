@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    background-image: url(img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.head {
+    width: 100%;
+    display: flex;
+    height: 240px;
+}
+
+h1 {
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 110px;
+    color: rgb(226, 186, 42);
+    text-shadow: -4px 0 rgb(57, 90, 167), 0 4px rgb(57, 90, 167), 4px 0 rgb(57, 90, 167), 0 -4px rgb(57, 90, 167);
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-left: 350px;
+    margin-top: -50px;
+}
+
+h3 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.headline {
+    width: 50%;
+}
+
+.search {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input {
+    height: 45px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 170px;
+    outline: none;
+}
+
+.search button {
+    width: 100px;
+    height: 59px;
+    border-radius: 10px;
+    padding: 9px;
+    font-size: 20px;
+    margin-left: -12px;
+    background-color: rgb(97, 97, 190);
+    color: white;
+    cursor: pointer;
+}
+
+.search button:hover {
+    background-color: rgb(37, 37, 119);
+    cursor: pointer;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+@media(max-width:1285px) {
+    .head {
+        height: 210px;
+        flex-direction: column;
+    }
+
+    h1 {
+        margin-left: 500px;
+        margin-top: -50px;
+        font-size: 85px;
+    }
+
+    .search {
+        margin-left: 360px;
+    }
+
+    .content {
+        margin-top: 70px;
+    }
+}
+
+@media(max-width:950px) {
+    h1 {
+        margin-left: 322px;
+        margin-top: -35px;
+        font-size: 75px;
+    }
+
+    .search {
+        margin-left: 245px;
+    }
+}
+
+@media(max-width:650px) {
+    h1 {
+        margin-left: 192px;
+        margin-top: -12px;
+        font-size: 60px;
+    }
+
+    .search {
+        margin-left: 95px;
+    }
+}
+
+@media(max-width:600px) {
+    .overview {
+        height: 580px !important;
+        width: 204px !important;
+        background-size: 335px !important;
+        margin-top: -95px !important;
+        font-size: 15px !important;
+    }
+
+    #poke-number {
+        margin-top: 17px !important;
+        font-size: 17px !important;
+        margin-left: 36px !important;
+    }
+
+
+    #poke-image {
+        width: 160px !important;
+        height: 160px !important;
+        margin-left: 20px !important;
+    }
+
+    .about-box {
+        font-size: 15px !important;
+        font-weight: 400 !important;
+        margin-top: -30px !important;
+    }
+
+    .about-content {
+        min-height: 240px !important;
+    }
+
+    .types span {
+        font-size: 13px !important;
+    }
+
+    .move-content {
+        width: 172px !important;
+        padding: 10px !important;
+    }
+
+    .chart-container {
+        min-height: 250px !important;
+    }
+
+    .chart-container canvas {
+        height: 180px !important;
+        width: 180px !important;
+    }
+
+}
+
+@media(max-width:465px) {
+    h1 {
+        margin-left: 90px;
+        margin-top: 20px;
+        font-size: 45px;
+    }
+
+    h2{
+        font-size: 15px !important;
+    }
+
+    .search {
+        margin-left: 100px;
+    }
+
+    .search input {
+        height: 30px;
+        width: 120px;
+        font-size: 15px;
+    }
+
+    .search button {
+        height: 44px;
+    }
+
+    .arrows {
+        gap: 125px !important;
+    }
+
+    #close-window {
+        height: 15px !important;
+        width: 15px !important;
+        font-size: 10px !important;
+        margin-top: -4px !important;
+        margin-right: 1px !important;
+    }
+}

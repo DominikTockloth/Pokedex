@@ -1,0 +1,231 @@
+.poke-card {
+    position: relative;
+    height: 285px;
+    width: 250px;
+    background-color: rgb(222, 216, 216);
+    background-image: url(icons/poke-bg.png);
+    background-position: center;
+    background-size: 180px;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    margin-left: 25px;
+    padding: 8px;
+    color: rgb(156, 154, 154);
+    transition: solid 225ms ease-in-out;
+}
+
+
+
+.poke-card:hover {
+    cursor: pointer;
+    scale: 0.9;
+    box-shadow: 5px 5px 5px 5px rgb(248, 218, 50);
+    transition: solid 225ms ease-in-out;
+}
+
+.poke-name {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 12px;
+}
+
+#poke-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#poke-number {
+    margin-top: -2px;
+    font-size: 22px;
+}
+
+.types {
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.types span {
+    background-color: #000000;
+    border-radius: 15px;
+    font-size: 17px;
+    padding: 8px;
+    color: white;
+}
+
+.d-none {
+    display: none;
+}
+
+.blur {
+    filter: blur(4px);
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/*----------- Poke-Cards-Big ------------- */
+
+.overview-bg {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.overview {
+    position: fixed;
+    height: 700px;
+    width: 450px;
+    background-color: rgb(222, 216, 216);
+    background-image: url(icons/poke-bg.png);
+    background-position: center;
+    background-size: 430px;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    z-index: 1;
+    color: rgb(112, 108, 108);
+}
+
+.overview:hover {
+    cursor: pointer;
+}
+
+.poke-name-big {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.poke-number-big {
+    margin-top: 25px !important;
+    font-size: 19px;
+    margin-left: 50px;
+}
+
+.poke-img-big {
+    width: 265px !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    margin-top: 5px;
+    margin-left: 78px !important;
+}
+
+.about {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+.about span {
+    font-size: 19px;
+}
+
+.about span:hover {
+    text-decoration: underline;
+    scale: 1.2;
+    cursor: pointer;
+}
+
+.about-content {
+    background-color: white;
+    min-height: 308px;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.about-box {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: -30px;
+}
+
+.about-box div {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#close-window {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: -25px;
+}
+
+#close-window {
+    margin-top: 20px;
+    margin-right: -55px;
+    border-radius: 100%;
+    background-color: rgb(97, 88, 88);
+    color: white;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+#close-window:hover {
+    cursor: pointer;
+    border: 2px solid rgb(97, 88, 88);
+    color: rgb(97, 88, 88);
+    background-color: white;
+}
+
+.disable {
+    pointer-events: none;
+}
+
+.arrows {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: -30px;
+    gap: 240px;
+}
+
+.arrows img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+
+.move-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 392px;
+    height: 272px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+.move-content span {
+    font-size: 20px;
+    display: flex;
+    margin-right: 10px;
+    background-color: beige;
+    padding: 6px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
