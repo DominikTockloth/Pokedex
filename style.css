@@ -1,31 +1,52 @@
 body {
     margin: 0;
-    background-image: url(img/background.jpg);
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 150px;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(img/background.jpeg);
     background-position: center;
-    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 100vh;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-
+    background-size: cover;
 }
 
-.head {
-    width: 100%;
+.d-none {
+    display: none;
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 105;
+    height: 150px;
     display: flex;
-    height: 240px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #26282a;
+    padding: 0 100px;
+    box-shadow: 4px 2px 2px 2px;
 }
+
+.headline {
+    display: flex;
+    align-items: center;
+    height: 150px;
+    margin-bottom: 37px;
+}
+
 
 h1 {
-    font-family: 'Pokemon Solid', sans-serif;
-    font-size: 110px;
-    color: rgb(226, 186, 42);
-    text-shadow: -4px 0 rgb(57, 90, 167), 0 4px rgb(57, 90, 167), 4px 0 rgb(57, 90, 167), 0 -4px rgb(57, 90, 167);
     margin-block-start: 0;
     margin-block-end: 0;
-    margin-left: 350px;
-    margin-top: -50px;
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 65px;
+    color: rgb(226, 186, 42);
+    text-shadow: -4px 0 rgb(57, 90, 167), 0 4px rgb(57, 90, 167), 4px 0 rgb(57, 90, 167), 0 -4px rgb(57, 90, 167);
+
 }
 
 h3 {
@@ -37,23 +58,19 @@ h3 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.headline {
-    width: 50%;
+    gap: 30px;
+    margin-bottom: 50px;
+    padding-top: 50px;
 }
 
 .search {
-    width: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 12px;
 }
 
-.search input {
-    height: 45px;
+ input {
+    height: 32px;
     padding: 5px;
     font-size: 20px;
     border-radius: 10px;
@@ -61,21 +78,32 @@ h3 {
     outline: none;
 }
 
+input:focus{
+    background-color: rgb(226, 186, 42);
+    color: white;
+    border: 2px solid rgb(57, 90, 167) ;
+}
+
+input:focus::placeholder{
+    color: white;
+}
+
 .search button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100px;
-    height: 59px;
+    height: 46px;
     border-radius: 10px;
-    padding: 9px;
-    font-size: 20px;
-    margin-left: -12px;
-    background-color: rgb(97, 97, 190);
+    padding: 12px;
+    font-size: 16px;
+    background-color: rgb(226, 186, 42);
     color: white;
     cursor: pointer;
 }
 
 .search button:hover {
-    background-color: rgb(37, 37, 119);
-    cursor: pointer;
+    background-color: rgb(57, 90, 167);
 }
 
 .center {
@@ -85,137 +113,100 @@ h3 {
     z-index: 2;
 }
 
-@media(max-width:1285px) {
-    .head {
-        height: 210px;
-        flex-direction: column;
-    }
-
-    h1 {
-        margin-left: 500px;
-        margin-top: -50px;
-        font-size: 85px;
-    }
-
-    .search {
-        margin-left: 360px;
-    }
-
-    .content {
-        margin-top: 70px;
-    }
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
 }
+
+.load-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 60px;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #e2bb2b;
+    box-shadow: 8px 0px 15px 6px #395AA7;
+    color: white;
+    cursor: pointer;
+}
+
+.load-btn:hover {
+    background-color: rgb(57, 90, 167);
+    box-shadow: 8px 0px 15px 6px #e2bb2b;
+}
+
+/******************************************  Style of scrollbar  *********************************************/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #395AA7;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #e2bb2b;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+/******************************************  Responsive  *****************************************************/
 
 @media(max-width:950px) {
-    h1 {
-        margin-left: 322px;
-        margin-top: -35px;
-        font-size: 75px;
-    }
+ header{
+    flex-direction: column !important;
+ }
 
-    .search {
-        margin-left: 245px;
-    }
+ .headline{
+    margin-bottom: unset !important;
+    height: 50px !important;
+ }
+
+ h1{
+    font-size: 50px !important;
+ }
 }
 
-@media(max-width:650px) {
-    h1 {
-        margin-left: 192px;
-        margin-top: -12px;
-        font-size: 60px;
-    }
+@media(max-width:500px) {
+ .detail-card{
+    width: 320px !important;
+ }
 
-    .search {
-        margin-left: 95px;
-    }
+ .detail-top{
+    background-size: 240px !important;
+ }
+
+ .poke-img-big {
+    width: 220px !important;
+    height: 220px !important;
+    margin-left: 60px !important;
 }
 
-@media(max-width:600px) {
-    .overview {
-        height: 580px !important;
-        width: 204px !important;
-        background-size: 335px !important;
-        margin-top: -95px !important;
-        font-size: 15px !important;
-    }
-
-    #poke-number {
-        margin-top: 17px !important;
-        font-size: 17px !important;
-        margin-left: 36px !important;
-    }
-
-
-    #poke-image {
-        width: 160px !important;
-        height: 160px !important;
-        margin-left: 20px !important;
-    }
-
-    .about-box {
-        font-size: 15px !important;
-        font-weight: 400 !important;
-        margin-top: -30px !important;
-    }
-
-    .about-content {
-        min-height: 240px !important;
-    }
-
-    .types span {
-        font-size: 13px !important;
-    }
-
-    .move-content {
-        width: 172px !important;
-        padding: 10px !important;
-    }
-
-    .chart-container {
-        min-height: 250px !important;
-    }
-
-    .chart-container canvas {
-        height: 180px !important;
-        width: 180px !important;
-    }
-
+#close-window{
+    margin-top: -2px !important;
+    margin-right: -8px !important;
 }
 
-@media(max-width:465px) {
-    h1 {
-        margin-left: 90px;
-        margin-top: 20px;
-        font-size: 45px;
-    }
-
-    h2{
-        font-size: 15px !important;
-    }
-
-    .search {
-        margin-left: 100px;
-    }
-
-    .search input {
-        height: 30px;
-        width: 120px;
-        font-size: 15px;
-    }
-
-    .search button {
-        height: 44px;
-    }
-
-    .arrows {
-        gap: 125px !important;
-    }
-
-    #close-window {
-        height: 15px !important;
-        width: 15px !important;
-        font-size: 10px !important;
-        margin-top: -4px !important;
-        margin-right: 1px !important;
-    }
+.move-content{
+    width: unset !important;
 }
+
+.move-content span{
+    font-size: 17px !important;
+}
+
+.about-box{
+    font-size: 17px !important;
+}
+}
+
