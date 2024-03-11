@@ -12,7 +12,7 @@
     padding: 8px;
     color: white;
     transition: solid 125ms ease-in-out;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px -4px 5px 5px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
 
@@ -20,6 +20,7 @@
     cursor: pointer;
     transform: scale(1.075);
     transition: solid 125ms ease-in-out;
+    box-shadow: 0px -2px 29px 0px rgb(247, 254, 49);;
 }
 
 .poke-name {
@@ -111,7 +112,7 @@
 }
 
 .poke-img-big {
-    width: 265px ;
+    width: 265px;
     height: 250px;
     object-fit: contain;
     margin-top: 5px;
