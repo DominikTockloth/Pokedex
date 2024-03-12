@@ -26,7 +26,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: #26282a;
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 0 100px;
     box-shadow: 4px 2px 2px 2px;
 }
@@ -69,7 +69,7 @@ h3 {
     gap: 12px;
 }
 
- input {
+input {
     height: 32px;
     padding: 5px;
     font-size: 20px;
@@ -78,13 +78,13 @@ h3 {
     outline: none;
 }
 
-input:focus{
+input:focus {
     background-color: rgb(226, 186, 42);
     color: white;
-    border: 2px solid rgb(57, 90, 167) ;
+    border: 2px solid rgb(57, 90, 167);
 }
 
-input:focus::placeholder{
+input:focus::placeholder {
     color: white;
 }
 
@@ -163,50 +163,49 @@ input:focus::placeholder{
 /******************************************  Responsive  *****************************************************/
 
 @media(max-width:950px) {
- header{
-    flex-direction: column !important;
- }
+    header {
+        flex-direction: column !important;
+    }
 
- .headline{
-    margin-bottom: unset !important;
-    height: 50px !important;
- }
+    .headline {
+        margin-bottom: unset !important;
+        height: 50px !important;
+    }
 
- h1{
-    font-size: 50px !important;
- }
+    h1 {
+        font-size: 50px !important;
+    }
 }
 
 @media(max-width:500px) {
- .detail-card{
-    width: 320px !important;
- }
+    .detail-card {
+        width: 320px !important;
+    }
 
- .detail-top{
-    background-size: 240px !important;
- }
+    .detail-top {
+        background-size: 240px !important;
+    }
 
- .poke-img-big {
-    width: 220px !important;
-    height: 220px !important;
-    margin-left: 60px !important;
+    .poke-img-big {
+        width: 220px !important;
+        height: 220px !important;
+        margin-left: 60px !important;
+    }
+
+    #close-window {
+        margin-top: -2px !important;
+        margin-right: -8px !important;
+    }
+
+    .move-content {
+        width: unset !important;
+    }
+
+    .move-content span {
+        font-size: 17px !important;
+    }
+
+    .about-box {
+        font-size: 17px !important;
+    }
 }
-
-#close-window{
-    margin-top: -2px !important;
-    margin-right: -8px !important;
-}
-
-.move-content{
-    width: unset !important;
-}
-
-.move-content span{
-    font-size: 17px !important;
-}
-
-.about-box{
-    font-size: 17px !important;
-}
-}
-

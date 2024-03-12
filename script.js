@@ -1,6 +1,5 @@
 const allPokeData = [];
 let loadedPokemon = 20;
-let searchedPokemon = [];
 let loadAnimation = document.getElementById('loader');
 let content = document.getElementById('content');
 let loadBtn = document.querySelector('.load-btn');
@@ -121,9 +120,9 @@ function nextPokemon(i) {
   document.getElementById('overview').innerHTML = '';
   if (i < allPokeData.length - 1)
     openCardOverview(i + 1);
-  if (i === allPokeData.length - 1)
-    document.getElementById('content').classList.remove('blur');
-  document.getElementById('content').classList.remove('disable');
+  if (i >= allPokeData.length - 1) {
+    hideOverview();
+  }
 }
 
 
